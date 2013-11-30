@@ -1,7 +1,7 @@
 <?php
 
-$word = @$_GET['word'];
-
+$word = @$_GET['word']; // sql injection ?
+// use pdo instead of mysqli. 
 $mysqli = new mysqli('localhost', 'root', 'password', 'database');
 
 $mysqli->query("SET NAMES 'utf8'");
